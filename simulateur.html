@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Expert | ElitePerf</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <header></header> <main class="container">
+        <section style="max-width: 900px; margin: 0 auto;">
+            <h1>Diagnostic de Supplémentation Expert</h1>
+            <p>Cet algorithme analyse votre physiologie pour ne recommander que l'utile.</p>
+            
+            <div class="card simulator-form">
+                <h3 style="color:var(--primary); margin-bottom:15px;">1. Profil Sportif</h3>
+                <div class="grid-3">
+                    <div>
+                        <label>Sport principal</label>
+                        <select id="sport">
+                            <option value="muscu">Musculation / Bodybuilding</option>
+                            <option value="crossfit">CrossFit / Hybride</option>
+                            <option value="endurance">Course / Cyclisme</option>
+                            <option value="combat">Sports de combat</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Fréquence</label>
+                        <select id="frequence">
+                            <option value="modere">2-3 fois / semaine</option>
+                            <option value="intense">4-5 fois / semaine</option>
+                            <option value="elite">6+ fois / semaine</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Objectif Prioritaire</label>
+                        <select id="objectif">
+                            <option value="sante">Santé & Longévité</option>
+                            <option value="masse">Prise de Muscle / Force</option>
+                            <option value="seche">Perte de Gras</option>
+                            <option value="perf">Performance pure</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr style="border:0; border-top:1px solid #eee; margin: 20px 0;">
+                
+                <h3 style="color:var(--primary); margin-bottom:15px;">2. Profil Physiologique</h3>
+                <div class="grid-3">
+                    <div>
+                        <label>Votre Âge</label>
+                        <select id="age">
+                            <option value="jeune">- de 30 ans</option>
+                            <option value="vieux">30 ans et plus</option>
+                            <option value="senior">50 ans et plus</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Régime</label>
+                        <select id="diet">
+                            <option value="omni">Omnivore</option>
+                            <option value="vege">Végétarien / Végétalien</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Digestion</label>
+                        <select id="digestion">
+                            <option value="fer">Solide</option>
+                            <option value="sensible">Sensible (Lactose...)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-3">
+                    <div>
+                        <label>Douleurs ?</label>
+                        <select id="douleur">
+                            <option value="non">Aucune</option>
+                            <option value="tendon">Tendinites</option>
+                            <option value="dos">Dos</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Sommeil & Stress</label>
+                        <select id="stress">
+                            <option value="zen">Bon sommeil</option>
+                            <option value="eleve">Stressé / Mauvais sommeil</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Budget</label>
+                        <select id="budget">
+                            <option value="confort">Le top du top</option>
+                            <option value="moyen">Standard</option>
+                            <option value="etudiant">Serré</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="lancerDiagnostic()" style="width: 100%; margin-top: 20px;">Générer mon pack expert</button>
+            </div>
+
+            <div id="resultats" class="result-box">
+                <h2 style="margin-top:0">Votre Pack Idéal :</h2>
+                <ul id="liste-produits" style="font-size: 1.2rem; color: var(--primary); margin-bottom: 20px; padding-left: 20px;"></ul>
+                <hr style="border: 0; border-top: 1px solid #c8e6c9; margin: 20px 0;">
+                <h3>Analyse du coach :</h3>
+                <div id="liste-raisons"></div>
+                <div class="affiliate-box">
+                    <p>Qualité garantie par Nutripure.</p>
+                    <span class="affiliate-code">CODE : MONCODE</span>
+                    <br>
+                    <a href="https://www.nutripure.fr" target="_blank" class="btn">Commander ma sélection</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer> <script src="assets/main.js"></script>
+    <script src="assets/layout.js"></script>
+    <script>initLayout(false, 'simu');</script>
+</body>
+</html>

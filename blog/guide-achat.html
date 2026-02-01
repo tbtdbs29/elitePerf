@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide de Survie : Comment ne pas se faire arnaquer | ElitePerf</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        .label-example { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin: 20px 0; font-family: 'Courier New', monospace; }
+        .bad-label { border-left: 5px solid #e74c3c; }
+        .good-label { border-left: 5px solid #27ae60; }
+        .highlight-bad { background-color: #fadbd8; font-weight: bold; padding: 2px; }
+        .highlight-good { background-color: #d5f5e3; font-weight: bold; padding: 2px; }
+        
+        /* Nouveau Style Graphique "Clean" */
+        .chart-container { margin: 30px 0; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        .chart-row { margin-bottom: 20px; }
+        .chart-label { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px; color: #333; }
+        .chart-meta { font-size: 0.9rem; color: #666; font-weight: normal; }
+        .chart-track { height: 12px; background: #eee; border-radius: 6px; overflow: hidden; }
+        .chart-fill { height: 100%; border-radius: 6px; width: 0; animation: fillBar 1.5s ease-out forwards; }
+        
+        @keyframes fillBar { from { width: 0; } to { width: var(--w); } }
+    </style>
+</head>
+<body>
+
+    <header></header>
+
+    <main class="container">
+        <article class="article-content">
+            <div class="blog-header">
+                <span style="color: var(--accent); font-weight: bold; text-transform: uppercase;">Éducation & Industrie</span>
+                <h1 style="margin-top:10px;">Guide de Survie : 4 Arnaques à éviter sur vos étiquettes</h1>
+                <p>L'industrie des compléments est une jungle non régulée. Si vous ne savez pas lire une étiquette, vous jetez votre argent par les fenêtres.</p>
+            </div>
+
+            <p>Le marketing vous vend du rêve, la science regarde les molécules. Voici les 4 pièges les plus courants que les marques "Instagram" utilisent pour réduire leurs coûts au détriment de votre santé.</p>
+
+            <h2>1. L'arnaque des "Proprietary Blends" (Mélanges Propriétaires)</h2>
+            <p>C'est la technique n°1 pour cacher le sous-dosage. La marque liste un mélange d'ingrédients sous un nom cool ("Matrix Pump Explosive") et donne le poids total, mais <strong>pas le détail par ingrédient</strong>.</p>
+            
+            <div class="label-example bad-label">
+                <strong>❌ MAUVAISE ÉTIQUETTE</strong><br><br>
+                <strong>Mélange Pump Extreme : 5000mg</strong><br>
+                (Créatine, Arginine, Caféine, Taurine)<br><br>
+                <em>Le piège : Il peut y avoir 4900mg de Taurine (pas chère) et seulement 10mg de Créatine. Vous ne le saurez jamais.</em>
+            </div>
+
+            <div class="label-example good-label">
+                <strong>✅ ÉTIQUETTE HONNÊTE (Standard Nutripure)</strong><br><br>
+                <strong>Détail pour 1 dose :</strong><br>
+                • Créatine Monohydrate (Creapure®) : <span class="highlight-good">3000 mg</span><br>
+                • Citrulline : <span class="highlight-good">6000 mg</span><br>
+                • Caféine : <span class="highlight-good">200 mg</span>
+            </div>
+            
+            <p><strong>La règle :</strong> Si vous ne voyez pas la quantité exacte de CHAQUE ingrédient, fuyez.</p>
+
+            <h2>2. La biodisponibilité (Le taux d'absorption)</h2>
+            <p>Acheter du Magnésium ne suffit pas. C'est la molécule à laquelle il est attaché qui détermine si votre corps va l'absorber ou l'expulser (diarrhée).</p>
+
+            <h3>Comparatif d'absorption du Magnésium :</h3>
+            <div class="chart-container">
+                <div class="chart-row">
+                    <div class="chart-label">
+                        <span>Oxyde de Magnésium (Le moins cher)</span>
+                        <span style="color:#e74c3c">4% Absorbé</span>
+                    </div>
+                    <div class="chart-track">
+                        <div class="chart-fill" style="--w: 4%; background: #e74c3c;"></div>
+                    </div>
+                    <div class="chart-meta">C'est littéralement de la craie. Effet laxatif garanti.</div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-label">
+                        <span>Citrate de Magnésium (Correct)</span>
+                        <span style="color:#f39c12">30% Absorbé</span>
+                    </div>
+                    <div class="chart-track">
+                        <div class="chart-fill" style="--w: 30%; background: #f39c12;"></div>
+                    </div>
+                    <div class="chart-meta">Acceptable mais peut irriter les intestins sensibles.</div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-label">
+                        <span>Bisglycinate (Le Top - Nutripure)</span>
+                        <span style="color:#27ae60">80% Absorbé</span>
+                    </div>
+                    <div class="chart-track">
+                        <div class="chart-fill" style="--w: 80%; background: #27ae60;"></div>
+                    </div>
+                    <div class="chart-meta">Forme chélatée douce pour l'estomac et ultra-assimilable.</div>
+                </div>
+            </div>
+            
+            <p>Beaucoup de multivitamines de supermarché utilisent de l'Oxyde. Vous payez pour des cailloux.</p>
+
+            <h2>3. L'Amino Spiking (La fausse protéine)</h2>
+            <p>Pour mesurer le taux de protéine, les labos mesurent l'azote. Les marques malhonnêtes rajoutent des acides aminés bon marché (Glycine, Taurine, Glutamine) dans la poudre.</p>
+            <p><strong>Résultat :</strong> Le test indique "25g de protéines", mais en réalité vous avez 15g de vraie Whey et 10g de poudre de perlimpinpin bas de gamme.</p>
+            <p><strong>Comment le repérer ?</strong> Regardez la liste des ingrédients. Si vous voyez "L-Glycine" ou "L-Taurine" listé séparément dans une Whey, c'est suspect.</p>
+
+            <h2>4. Les Labels Brevetés vs Génériques</h2>
+            <p>La provenance "Made in France" ne suffit pas si la matière première vient de Chine. Pour être sûr de la pureté, cherchez les brevets mondiaux qui garantissent l'absence de métaux lourds.</p>
+
+            <table style="width:100%; margin-top:20px; border-collapse: collapse;">
+                <tr style="background:#2c3e50; color:white;">
+                    <th style="padding:10px;">Ingrédient</th>
+                    <th style="padding:10px;">Label de Référence</th>
+                    <th style="padding:10px;">Risque sans label</th>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Créatine</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee; font-weight:bold; color:var(--accent);">Creapure®</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Dihydrotriazine (Toxique)</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Oméga 3</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee; font-weight:bold; color:var(--accent);">Epax®</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Métaux lourds (Mercure)</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Collagène</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee; font-weight:bold; color:var(--accent);">Peptan®</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Déchets d'abattoirs</td>
+                </tr>
+            </table>
+
+            <div class="affiliate-box">
+                <h3>Ne cherchez plus, Nutripure a déjà fait le tri</h3>
+                <p>Tous les produits Nutripure utilisent ces labels brevetés. Zéro mélange propriétaire. Zéro amino spiking.</p>
+                <span class="affiliate-code">MONCODE</span>
+                <br><br>
+                <a href="https://www.nutripure.fr" class="btn">Passer à la qualité certifiée</a>
+            </div>
+
+        </article>
+    </main>
+
+    <footer></footer>
+
+    <script src="../assets/layout.js"></script>
+    <script>initLayout(true, 'blog');</script>
+</body>
+</html>

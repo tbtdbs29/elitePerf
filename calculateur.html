@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Métabolisme & Macros | ElitePerf</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    
+    <header></header> <main class="container">
+        <section style="max-width: 900px; margin: 0 auto;">
+            <div class="blog-header">
+                <span style="color: var(--accent); font-weight: bold; text-transform: uppercase;">Nutrition de Précision</span>
+                <h1>Calculez vos Besoins & Macros</h1>
+                <p>Utilisez la formule Mifflin-St Jeor pour définir vos apports exacts.</p>
+            </div>
+            
+            <div class="card simulator-form">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">1. Vos Données</h3>
+                <div class="grid-3">
+                    <div>
+                        <label>Sexe</label>
+                        <select id="calcSexe"><option value="h">Homme</option><option value="f">Femme</option></select>
+                    </div>
+                    <div>
+                        <label>Âge (ans)</label>
+                        <input type="number" id="calcAge" placeholder="Ex: 30">
+                    </div>
+                    <div>
+                        <label>Poids (kg)</label>
+                        <input type="number" id="calcPoids" placeholder="Ex: 80">
+                    </div>
+                </div>
+                <div class="grid-3">
+                    <div>
+                        <label>Taille (cm)</label>
+                        <input type="number" id="calcTaille" placeholder="Ex: 180">
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <label>Niveau d'activité</label>
+                        <select id="calcActivity">
+                            <option value="1.2">Sédentaire</option>
+                            <option value="1.375">Léger (1-3x / sem)</option>
+                            <option value="1.55">Modéré (3-5x / sem)</option>
+                            <option value="1.725">Intense (6-7x / sem)</option>
+                            <option value="1.9">Athlète (Bi-quotidien)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">2. Votre Objectif</h3>
+                
+                <div class="grid-3">
+                    <div style="grid-column: span 2;">
+                        <label>Quel est votre but ?</label>
+                        <select id="calcGoal">
+                            <option value="-500">Perte de gras rapide (-500 kcal)</option>
+                            <option value="-250">Sèche progressive (-250 kcal)</option>
+                            <option value="0">Maintien (Performance)</option>
+                            <option value="250">Prise de muscle propre (+250 kcal)</option>
+                            <option value="500">Prise de masse (+500 kcal)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="calculerMacros()" style="width: 100%; margin-top: 20px;">Calculer ma diète</button>
+            </div>
+
+            <div id="macroResult" class="result-box" style="border-left: 5px solid var(--accent);">
+                <h2 style="margin-top:0; text-align: center;">Vos Besoins Journaliers</h2>
+                <div style="display:flex; justify-content:center; align-items:baseline; gap:10px; margin-bottom: 30px;">
+                    <span id="totalCalories" style="font-size: 3rem; font-weight: 800; color: var(--primary);">0</span>
+                    <span style="font-size: 1.5rem; color: #777;">kcal</span>
+                </div>
+                <div class="grid-3" style="text-align: center;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-bottom: 4px solid #3498db;">
+                        <span style="display:block; font-weight:bold; color: #777;">PROTÉINES</span>
+                        <span id="resProt" style="font-size: 1.8rem; font-weight: bold; color: #3498db;">0g</span>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-bottom: 4px solid #f1c40f;">
+                        <span style="display:block; font-weight:bold; color: #777;">LIPIDES</span>
+                        <span id="resLip" style="font-size: 1.8rem; font-weight: bold; color: #f1c40f;">0g</span>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-bottom: 4px solid #e74c3c;">
+                        <span style="display:block; font-weight:bold; color: #777;">GLUCIDES</span>
+                        <span id="resGlu" style="font-size: 1.8rem; font-weight: bold; color: #e74c3c;">0g</span>
+                    </div>
+                </div>
+                <div class="affiliate-box" style="margin-top: 30px;">
+                    <p><strong>Conseil :</strong> Une whey native vous aide à atteindre ce quota de protéines facilement.</p>
+                    <a href="https://www.nutripure.fr" target="_blank" class="btn">Voir la Whey Isolat</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer> <script src="assets/main.js"></script>
+    <script src="assets/layout.js"></script>
+    <script>initLayout(false, 'calc');</script>
+</body>
+</html>

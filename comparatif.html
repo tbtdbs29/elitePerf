@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Grand Comparatif : La Vérité sur vos Compléments | ElitePerf</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Styles Spécifiques au Comparateur (Gardés ici car uniques à cette page) */
+        .comparison-section { margin-bottom: 4rem; }
+        .vs-header { text-align: center; margin-bottom: 2rem; }
+        .vs-badge { background: #e74c3c; color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+        .pro-badge { background: var(--accent); color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+        .battle-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+        .battle-side { padding: 2rem; }
+        .battle-left { background: #fff; border-right: 1px solid #eee; }
+        .battle-right { background: #f9f9f9; color: #555; }
+        .danger-list li { color: #c0392b; list-style-type: none; margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .danger-list li::before { content: "⚠️"; position: absolute; left: 0; }
+        .benefit-list li { color: #27ae60; list-style-type: none; margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .benefit-list li::before { content: "✓"; position: absolute; left: 0; font-weight: bold; }
+        .score-box { font-size: 2rem; font-weight: 800; display: block; margin-bottom: 10px; }
+        .verdict { font-style: italic; border-top: 1px solid #eee; padding-top: 15px; margin-top: 15px; font-size: 0.9rem; }
+        @media (max-width: 768px) { .battle-card { grid-template-columns: 1fr; } }
+        .detail-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+        .detail-table th { background: #34495e; color: white; padding: 12px; text-align: left; }
+        .detail-table td { padding: 12px; border-bottom: 1px solid #eee; }
+        .brand-col { font-weight: bold; color: #2c3e50; }
+    </style>
+</head>
+<body>
+
+    <header></header> <main class="container">
+        <div class="blog-header">
+            <span style="color: #e74c3c; font-weight: bold; text-transform: uppercase;">Enquête Exclusive</span>
+            <h1>Ce que l'industrie du fitness vous cache</h1>
+            <p>Comparatif des standards Nutripure face aux géants du marché.</p>
+        </div>
+
+        <section class="comparison-section">
+            <div class="vs-header">
+                <h2>ROUND 1 : La Guerre de la Whey</h2>
+                <p>Déchet fromager vs Lait Natif.</p>
+            </div>
+            <div class="battle-card">
+                <div class="battle-side battle-left">
+                    <span class="pro-badge">Nutripure</span>
+                    <h3 style="margin: 15px 0;">Whey Isolat Native</h3>
+                    <ul class="benefit-list">
+                        <li><strong>Filtration à froid :</strong> Protéine non dénaturée.</li>
+                        <li><strong>Profil Aminé :</strong> +16% de Leucine.</li>
+                        <li><strong>Digestion :</strong> Zéro GMP (pas de ballonnements).</li>
+                    </ul>
+                    <span class="score-box" style="color:var(--accent)">Note : A+</span>
+                </div>
+                <div class="battle-side battle-right">
+                    <span class="vs-badge">Standard "Low Cost"</span>
+                    <h3 style="margin: 15px 0;">Whey Fromagère</h3>
+                    <ul class="danger-list">
+                        <li><strong>Pasteurisation double :</strong> Bio-actifs détruits.</li>
+                        <li><strong>Traitement Acide :</strong> Agents chimiques de caillage.</li>
+                        <li><strong>Blanchiment :</strong> Peroxyde parfois utilisé.</li>
+                    </ul>
+                    <span class="score-box" style="color:#e74c3c">Note : C-</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <div class="vs-header"><h2>ROUND 2 : Additifs Toxiques</h2></div>
+            <div style="overflow-x: auto; background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <table class="detail-table">
+                    <thead><tr><th>Additif</th><th>Risque</th><th>Nutripure</th><th>Autres</th></tr></thead>
+                    <tbody>
+                        <tr><td class="brand-col">Sucralose</td><td>Flore intestinale</td><td style="color:var(--accent)">NON</td><td style="color:#e74c3c">OUI</td></tr>
+                        <tr><td class="brand-col">Acesulfame-K</td><td>Suspecté cancérigène</td><td style="color:var(--accent)">NON</td><td style="color:#e74c3c">OUI</td></tr>
+                        <tr><td class="brand-col">Dioxyde Titane</td><td>Génotoxique</td><td style="color:var(--accent)">NON</td><td style="color:#e74c3c">POSSIBLE</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="affiliate-box" style="background: #2c3e50; color: white; border: none; padding: 3rem; margin-top: 3rem;">
+            <h2 style="color:white; margin-top:0;">Arrêtez d'empoisonner votre corps</h2>
+            <div style="background: white; color: #333; display: inline-block; padding: 10px 20px; border-radius: 5px; margin: 20px 0;">
+                CODE : <span style="color:#c0392b; font-weight:bold;">MONCODE</span>
+            </div>
+            <br>
+            <a href="https://www.nutripure.fr" class="btn">Passer à la qualité Nutripure</a>
+        </div>
+    </main>
+
+    <footer></footer> <script src="assets/layout.js"></script>
+    <script>initLayout(false, 'comparatif');</script>
+</body>
+</html>
