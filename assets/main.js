@@ -160,3 +160,66 @@ function lancerDiagnostic() {
     resultBox.style.display = "block";
     resultBox.scrollIntoView({behavior: "smooth"});
 }
+
+// ==========================================
+// 3. GESTION NEWSLETTER (EmailJS)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const newsForm = document.getElementById('newsletterForm');
+    
+    if(newsForm) {
+        newsForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Empêche le rechargement
+            
+            const emailInput = document.querySelector('#newsletterForm input');
+            const btn = document.querySelector('#newsletterForm button');
+            const originalText = btn.textContent;
+            
+            if(emailInput.value) {
+                // 1. Feedback visuel immédiat
+                btn.textContent = "Envoi en cours...";
+                btn.disabled = true;
+                btn.style.opacity = "0.7";
+
+                // 2. Envoi réel via EmailJS
+                // Remplace 'service_ID' et 'template_ID' par les tiens
+                const serviceID = 'service_gmail'; 
+                const templateID = 'template_newsletter'; 
+
+                // On envoie l'objet qui contient les variables du template
+                const params = {
+                    user_email: emailInput.value
+                };
+
+                emailjs.send(serviceID, templateID, params)
+                    .then(() => {
+                        // SUCCÈS
+                        btn.style.background = "#27ae60";
+                        btn.textContent = "Bienvenue dans l'Élite ! ✅";
+                        emailInput.value = ""; // Vide le champ
+                        
+                        // Remet le bouton normal après 3 secondes
+                        setTimeout(() => {
+                            btn.style.background = ""; // Retour couleur CSS
+                            btn.textContent = originalText;
+                            btn.disabled = false;
+                            btn.style.opacity = "1";
+                        }, 3000);
+                    })
+                    .catch((err) => {
+                        // ERREUR
+                        console.error('Erreur EmailJS:', err);
+                        btn.style.background = "#c0392b";
+                        btn.textContent = "Erreur technique ❌";
+                        alert("Une erreur est survenue. Vérifiez votre connexion ou réessayez plus tard.");
+                        
+                        setTimeout(() => {
+                            btn.style.background = "";
+                            btn.textContent = originalText;
+                            btn.disabled = false;
+                        }, 3000);
+                    });
+            }
+        });
+    }
+});

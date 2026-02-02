@@ -57,3 +57,111 @@ footer a { color: #bdc3c7; text-decoration: none; display: block; margin-bottom:
 footer a:hover { color: var(--white); }
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- CAROUSEL INFINI --- */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 2rem;
+    animation: scroll 40s linear infinite; /* 40s = vitesse (plus le chiffre est haut, plus c'est lent) */
+}
+
+/* Pause l'animation quand on passe la souris dessus pour lire */
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* Force la taille des cartes dans le carrousel */
+.carousel-track .card {
+    width: 350px; /* Largeur fixe pour la régularité */
+    flex-shrink: 0; /* Empêche l'écrasement */
+    white-space: normal; /* Permet au texte de revenir à la ligne */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* On déplace de 50% car on aura dupliqué le contenu */
+}
+
+/* Ajustement mobile */
+@media (max-width: 768px) {
+    .carousel-track .card {
+        width: 280px;
+    }
+}
+
+/* --- NEWSLETTER SECTION --- */
+.newsletter-section {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-content h2 {
+    color: white; /* Force le blanc sur fond foncé */
+    border-left: none; /* Enlève la barre verte des titres standards */
+    padding-left: 0;
+    font-size: 2.2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #388E3C;
+}
+
+.spam-promise {
+    font-size: 0.8rem;
+    color: #bdc3c7;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Mobile : Formulaire en colonne */
+@media (max-width: 600px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+    .newsletter-form button {
+        padding: 15px;
+    }
+}
